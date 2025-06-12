@@ -27,7 +27,7 @@ Collateralized Loans (1 SOL = 10M tokens)
 DevNet Battle-Tested (Active development phase)
 
 🛠 Technical Stack
-Anchor framework (Rust)
+JavasScript Backend
 
 Token2022 Program
 
@@ -38,30 +38,34 @@ DevNet deployment
 ## 🕒 Dynamic Repayment System
 
 The protocol implements sophisticated time-based incentives:
+🏁 Quickstart
+Clone the repo:
 
-```rust
-// Anchor program logic for dynamic repayment calculation
-// File: programs/loan/src/lib.rs
+bash
+Kopēt
+Rediģēt
+git clone https://github.com/tavs-repo/solana-token-loan.git
+cd solana-token-loan
+Install dependencies:
 
-/// Calculates collateral return amount based on loan age
-/// 
-/// # Arguments
-/// * `loan_age` - Duration in seconds since loan initiation
-/// 
-/// # Returns
-/// u64 representing lamports amount to return
-fn calculate_repayment(loan_age: u64) -> Result<u64> {
-    const BASE_RATE: u64 = 1_000_000_000; // 1 SOL in lamports
-    const EARLY_BONUS: i64 = -300_000_000; // -0.3 SOL incentive
-    const LATE_PENALTY: i64 = 300_000_000; // +0.3 SOL penalty
-    const GRACE_PERIOD: u64 = 60 * 86_400; // 60 days in seconds
-    
-    match loan_age.cmp(&GRACE_PERIOD) {
-        Ordering::Less => Ok((BASE_RATE as i64 + EARLY_BONUS) as u64), // Early repayment bonus
-        _ => Ok((BASE_RATE as i64 + LATE_PENALTY) as u64) // Late repayment penalty
-    }
-}
-```
+bash
+Kopēt
+Rediģēt
+npm install
+Start the frontend:
+
+bash
+Kopēt
+Rediģēt
+npm run dev
+Connect your wallet to Solana DevNet and start testing.
+
+⚠️ Known Issues & Limitations
+Loan repayment UI is under development — may have bugs.
+
+Dynamic interest rates and penalties planned but not yet live.
+
+Backend APIs are evolving — breaking changes possible.
 
 **Key Features:**
 - 🕑 Time-sensitive repayment logic
