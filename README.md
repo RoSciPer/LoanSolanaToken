@@ -13,6 +13,24 @@ graph TD
     C --> B
     D --> B
 ```
+
+🔥 Key Features
+Token2022 Implementation (0 decimals for simplified math)
+
+Auto-Created ATAs (No wallet setup hassles)
+
+Collateralized Loans (1 SOL = 10M tokens)
+
+DevNet Battle-Tested (Active development phase)
+
+🛠 Technical Stack
+Anchor framework (Rust)
+
+Token2022 Program
+
+TypeScript client
+
+DevNet deployment
 ## 🕒 Dynamic Repayment System
 
 The protocol implements time-based incentives:
