@@ -2,6 +2,7 @@
 solana loan app. 
 
 
+```mermaid
 graph TD
     A[User] -->|Deposit 1 SOL| B(Loan Program)
     B -->|Mints 10M Tokens| A
@@ -9,3 +10,4 @@ graph TD
     A -->|Late Repayment >60d| D[10M Tokens → 1.3 SOL]
     C --> B
     D --> B
+```
