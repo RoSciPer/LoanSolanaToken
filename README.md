@@ -54,3 +54,13 @@ fn calculate_repayment(loan_age: u64) -> Result<u64> {
 + Automated ATA creation
 - Repayment UI in progress
 - Dynamic rates planned for v2
+
+- 💡 Contribution Guidelines
+Issues: Open for feature requests/bugs
+
+PRs: Welcome for core improvements
+
+Security: Report vulnerabilities privately
+
+📜 License
+MIT (Open-source with commercial-friendly terms)
