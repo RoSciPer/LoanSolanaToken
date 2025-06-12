@@ -41,13 +41,13 @@ The protocol implements sophisticated time-based incentives:
 🏁 Quickstart
 Clone the repo:
 
-bash
+```bash
 Kopēt
 Rediģēt
 git clone https://github.com/tavs-repo/solana-token-loan.git
 cd solana-token-loan
 Install dependencies:
-
+```
 bash
 Kopēt
 Rediģēt
