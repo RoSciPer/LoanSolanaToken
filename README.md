@@ -1,6 +1,6 @@
 # 🚀 Solana Token Loan App (Token2022 Zero-Decimals Lending Protocol)
 
-![Apraksts](STLD2.png)
+![Apraksts](STLD.png)
 
 🌟 Overview
 This DevNet-ready Solana lending platform allows users to borrow 10,000,000 project tokens against 1 SOL collateral. Built with Token2022 standard (0 decimals) for maximum gas efficiency.
