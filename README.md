@@ -27,3 +27,4 @@ fn calculate_repayment(loan_age: u64) -> Result<u64> {
         _ => Ok((BASE_RATE as i64 + LATE_PENALTY) as u64)
     }
 }
+```
