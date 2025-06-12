@@ -4,8 +4,7 @@
 
 🌟 Overview
 This DevNet-ready Solana lending platform allows users to borrow 10,000,000 project tokens against 1 SOL collateral. Built with Token2022 standard (0 decimals) for maximum gas efficiency.
-solana loan app. 
-
+This project created beacause in future can be used in game platform. Take loan token play game where can win more tokens. Swap tokens to solana.
 
 ```mermaid
 graph TD
@@ -69,6 +68,7 @@ Backend APIs are evolving — breaking changes possible.
 - 🕑 Time-sensitive repayment logic
 - 💰 30% incentive/penalty structure
 - ⚖️ Fair economic design
+- 
 🚧 Current Development Status
 
 + Fully functional loan issuance
