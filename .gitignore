@@ -1,0 +1,15 @@
+# Sistēmas faili
+*.Identifier
+:Zone.Identifier
+
+# Konfigurācijas faili
+.env
+*.env
+
+# Atkarības
+node_modules/
+package-lock.json
+
+# IDE faili
+.vscode/
+.idea/
