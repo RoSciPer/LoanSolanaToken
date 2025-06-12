@@ -48,3 +48,9 @@ fn calculate_repayment(loan_age: u64) -> Result<u64> {
     }
 }
 ```
+🚧 Current Development Status
+
++ Fully functional loan issuance
++ Automated ATA creation
+- Repayment UI in progress
+- Dynamic rates planned for v2
