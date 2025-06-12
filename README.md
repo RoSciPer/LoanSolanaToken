@@ -31,23 +31,39 @@ Token2022 Program
 TypeScript client
 
 DevNet deployment
+
 ## 🕒 Dynamic Repayment System
 
-The protocol implements time-based incentives:
+The protocol implements sophisticated time-based incentives:
 
 ```rust
-// Anchor program logic snippet
+// Anchor program logic for dynamic repayment calculation
+// File: programs/loan/src/lib.rs
+
+/// Calculates collateral return amount based on loan age
+/// 
+/// # Arguments
+/// * `loan_age` - Duration in seconds since loan initiation
+/// 
+/// # Returns
+/// u64 representing lamports amount to return
 fn calculate_repayment(loan_age: u64) -> Result<u64> {
-    const BASE_RATE: u64 = 1_000_000_000; // 1 SOL
-    const EARLY_PENALTY: i64 = -300_000_000; // -0.3 SOL
-    const LATE_BONUS: i64 = 300_000_000; // +0.3 SOL
+    const BASE_RATE: u64 = 1_000_000_000; // 1 SOL in lamports
+    const EARLY_BONUS: i64 = -300_000_000; // -0.3 SOL incentive
+    const LATE_PENALTY: i64 = 300_000_000; // +0.3 SOL penalty
+    const GRACE_PERIOD: u64 = 60 * 86_400; // 60 days in seconds
     
-    match loan_age.cmp(&SECONDS_PER_DAY * 60) {
-        Ordering::Less => Ok((BASE_RATE as i64 + EARLY_BONUS) as u64),
-        _ => Ok((BASE_RATE as i64 + LATE_PENALTY) as u64)
+    match loan_age.cmp(&GRACE_PERIOD) {
+        Ordering::Less => Ok((BASE_RATE as i64 + EARLY_BONUS) as u64), // Early repayment bonus
+        _ => Ok((BASE_RATE as i64 + LATE_PENALTY) as u64) // Late repayment penalty
     }
 }
 ```
+
+**Key Features:**
+- 🕑 Time-sensitive repayment logic
+- 💰 30% incentive/penalty structure
+- ⚖️ Fair economic design
 🚧 Current Development Status
 
 + Fully functional loan issuance
