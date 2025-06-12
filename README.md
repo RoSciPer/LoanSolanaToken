@@ -42,22 +42,20 @@ The protocol implements sophisticated time-based incentives:
 Clone the repo:
 
 ```bash
-Kopēt
-Rediģēt
 git clone https://github.com/tavs-repo/solana-token-loan.git
 cd solana-token-loan
-Install dependencies:
 ```
-bash
-Kopēt
-Rediģēt
+Install dependencies:
+
+```bash
+
 npm install
 Start the frontend:
+```
+```bash
 
-bash
-Kopēt
-Rediģēt
 npm run dev
+```
 Connect your wallet to Solana DevNet and start testing.
 
 ⚠️ Known Issues & Limitations
